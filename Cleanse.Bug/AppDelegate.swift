@@ -15,16 +15,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    private var target: Target!
-
+    func injectProperties(subComponentFactory: ComponentFactory<AppSubComponent>) { }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-    // Override point for customization after application launch.
+        // Override point for customization after application launch.
 
-    let injector = try! ComponentFactory.of(AppComponent.self).build(())
-    injector.injectProperties(into: self)
+        let injector = try! ComponentFactory.of(AppComponent.self).build(())
+        injector.injectProperties(into: self)
 
-    return true
+        return true
     }
 
 
@@ -54,14 +53,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-    }
-
-    func injectProperties(
-        subComponentFactory: ComponentFactory<AppSubComponent>
-    ) {
-
-        target = subComponentFactory.build(())
-
     }
 
 }

@@ -6,24 +6,16 @@
 import Foundation
 import Cleanse
 
-public struct SubScope : Scope { }
-public typealias SubScopeBinder = Binder<SubScope>
 
 struct AppSubComponent: Cleanse.Component {
 
     // When we call AppComponent().build() it will return the Root type if successful
-    typealias Root = Target
-    typealias Scope = SubScope
+    typealias Root = ()
 
-    static func configure(binder: SubScopeBinder) {
-
-
-    }
+    static func configure(binder: Binder<Unscoped>) { }
 
     static func configureRoot(binder bind: ReceiptBinder<Root>) -> BindingReceipt<Root> {
-        return bind.to(factory: Target.init)
+        return bind.to(factory: { () })
     }
 
 }
-
-class Target {}
