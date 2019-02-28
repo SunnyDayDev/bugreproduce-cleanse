@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scheme
+   version = "1.3">
+   <BuildAction>
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForRunning = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "68B699B043E7A1F795C7A0FE"
+               BuildableName = "Cleanse.Bug.app"
+               BlueprintName = "Cleanse.Bug"
+               ReferencedContainer = "container:Cleanse.Bug.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
+   </BuildAction>
+   <LaunchAction
+      useCustomWorkingDirectory = "NO"
+      buildConfiguration = "Debug"
+      allowLocationSimulation = "YES">
+      <BuildableProductRunnable>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "68B699B043E7A1F795C7A0FE"
+            BuildableName = "Cleanse.Bug.app"
+            BlueprintName = "Cleanse.Bug"
+            ReferencedContainer = "container:Cleanse.Bug.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+   </LaunchAction>
+</Scheme>
